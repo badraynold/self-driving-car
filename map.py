@@ -17,7 +17,7 @@ from kivy.vector import Vector
 from kivy.clock import Clock
 
 # Importing the Dqn object from our AI in ai.py
-from ai import Dqn
+from ai2 import Dqn
 
 # Adding this line if we don't want the right click to put a red point
 Config.set('input', 'mouse', 'mouse,multitouch_on_demand')
@@ -139,7 +139,7 @@ class Game(Widget):
 
         if sand[int(self.car.x),int(self.car.y)] > 0:
             self.car.velocity = Vector(1, 0).rotate(self.car.angle)
-            last_reward = -1
+            last_reward = -2
         else: # otherwise
             self.car.velocity = Vector(6, 0).rotate(self.car.angle)
             last_reward = -0.2
